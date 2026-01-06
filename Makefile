@@ -33,3 +33,10 @@ clean:
 
 run:
 	poetry run uvicorn app.main:app --reload --host 0.0.0.0
+
+
+crawl:
+	rm -rf data/shopify_app_data.db 
+	rm -rf data/shopify_app_data.db-shm
+	rm -rf data/shopify_app_data.db-wal
+	cd app && ../$(VENV)/bin/scrapy crawl shopify_app_store_crawler 

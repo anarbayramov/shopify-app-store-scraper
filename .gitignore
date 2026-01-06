@@ -10,3 +10,5 @@ storage/
 source
 build/
 dist/
+site_map.xml
+data/
