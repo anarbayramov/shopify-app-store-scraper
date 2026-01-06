@@ -1,0 +1,12 @@
+.env
+**/.DS_Store
+**/__pycache__/
+*.pyc
+*.pyo
+lightning_logs
+venv
+storage/
+.bash_history
+source
+build/
+dist/

@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "Bullsheet"
+version = "1.0.0"
+authors = ["Anar Bayramov <anr.bayramov@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+# Python version
+python = ">=3.13,<3.15"
+
+pandas = "^2.3.3"
+numpy = "^2.2.6"
+fastapi = "^0.127.0"
+uvicorn = "^0.40.0"
+
+# Templating engine for rendering HTML in web applications
+jinja2 = "^3.1.6"
+
+# Interactive plotting library
+plotly = "^6.5.0"
+
+# Extends pandas for technical analysis, typically for financial data
+pandas-ta = "^0.4.71b0"
+
+# Forecasting tool for time series data
+
+diskcache = "^5.6.3"
+flake8-pyproject = "^1.2.3"
+requests = "^2.32.5"
+beautifulsoup4 = "^4.14.3"
+google-genai = "^1.53.0"
+djlint = "^1.36.4"
+websocket-client = "^1.9.0"
+pyobjc-framework-cocoa = "^12.1"
+pyobjc-framework-webkit = "^12.1"
+rumps = "^0.4.0"
+dotenv = "^0.9.9"
+flake8 = "^7.3.0"
+scrapy = "^2.14.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.2.0"
+flake8-pyproject = "^1.2.3"
+autopep8 = "^2.3.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503", "E128"]
+exclude = [".git", "__pycache__", "build", "dist"]
+per-file-ignores = [
+    '__init__.py:F401',
+]
+
+[tool.djlint]
+ignore = "H021"
